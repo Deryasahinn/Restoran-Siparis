@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container p-5">
+        <div class="row">
+            <!--MAIN-->
+            <div class="col-md-8">
+                <div class="urunler">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="images/kebap.jpg" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Adana Kebap</h5>
+                              <p id="adanafiyat" class="card-text">240₺</p>
+                              <h6>Adet:</h6>
+                              <input onchange="hesapla()" id="adanavalue" type="number" class="form-control">
+                             
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="images/kebap.jpg" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Urfa Kebap</h5>
+                              <p id="urfafiyat" class="card-text">240₺</p>
+                              <h6>Adet:</h6>
+                              <input onchange="hesapla()" value=""  id="urfavalue" type="number" class="form-control">
+                             
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="images/kebap.jpg" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Lahmacun</h5>
+                              <p id="lahmacunfiyat" class="card-text">90₺</p>
+                              <h6>Adet:</h6>
+                              <input  id="lahmacunvalue" onchange="hesapla()" type="number" class="form-control">
+                             
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SİDEBAR-->
+            <div class="col-md-4">
+                <!--SEPET-->
+                <div class="card">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Sepet</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                           
+                            <strong>Toplam:</strong>
+                            <span id="toplamfiyat">0</span>₺
+                        </p>
+
+                        <ul class="list-group" id="urunadetler">
+                            
+                           
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Bilgiler-->
+                <div class="card mt-4">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Bilgiler</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" class="form-control mb-3" placeholder="İsim Soyisim" name="" id="isim">
+
+                        <input type="text" class="form-control mb-3" placeholder="Telefon" name="" id="telefon">
+
+                        <textarea name="" class="form-control mb-3" id="adres" placeholder="Adres" " rows="3"></textarea>
+
+                        
+                    </div>
+                </div>
+
+                <a onclick="siparis()" id="siparisbtn" class="btn btn-xl btn-success mt-5" style="width:100%">Sipariş Oluştur</a>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
